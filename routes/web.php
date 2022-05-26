@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// Route::get('/mbptest', function(){
+Route::get('/mbptest', function(){
 
     // $mbptest = new Mbptest;
     // $mbptest->name = "Adam";
@@ -26,6 +26,6 @@ use Illuminate\Support\Facades\Route;
     // $mbptest->publish();
     // $mbptest->unpublish();
 
-    // dd(Mbptest::all(), Mbptest::withUnpublished()->get());
+    dd(Mbptest::all(), Mbptest::withUnpublished()->get());
 
-// });
+});
