@@ -19,9 +19,9 @@ class MustBePublishedServiceProvider extends ServiceProvider
         // Configs
         $this->mergeConfigFrom(__DIR__.'/../config/mustbepublished.php', 'mustbepublished');
 
-        if ($this->app->runningInConsole()) {
-            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        }
+        // if ($this->app->runningInConsole()) {
+        //     $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        // }
     }
 
     public function boot()
