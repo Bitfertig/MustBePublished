@@ -50,4 +50,15 @@ trait MustBePublished
     {
         return $this->qualifyColumn($this->getPublishedAtColumn());
     }
+
+
+    public function publish() {
+        $this->published_at = now();
+        $this->save();
+    }
+
+    public function unpublish() {
+        $this->published_at = null;
+        $this->save();
+    }
 }
