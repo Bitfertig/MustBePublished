@@ -51,7 +51,7 @@ trait MustBePublished
         return $this->qualifyColumn($this->getPublishedAtColumn());
     }
 
-
+    // Usage: Mbptest::withUnpublished()->find(1)->publish();
     public function publish() {
         $this->published_at = now();
         $this->save();
@@ -61,4 +61,11 @@ trait MustBePublished
         $this->published_at = null;
         $this->save();
     }
+    
+    // Usage: Mbptest::findAndPublish(1)
+    public static function findAndPublish($id)
+    {
+        return (new static)->withUnpublished()->find($id)->publish();
+    }
+    
 }
