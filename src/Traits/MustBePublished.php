@@ -52,6 +52,7 @@ trait MustBePublished
     }
 
     // Usage: Mbptest::withUnpublished()->find(1)->publish();
+    // or: $mbptest = new Mbptest; $mbptest->name = "Test"; $mbptest->publish();
     public function publish() {
         $this->published_at = now();
         $this->save();
