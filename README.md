@@ -113,11 +113,13 @@ Route::get('/posts', function(){
 });
 ```
 
+<!--
 ## Testing
 
 ```bash
 composer test
 ```
+-->
 
 ## Changelog
 
