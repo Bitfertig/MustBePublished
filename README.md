@@ -79,7 +79,7 @@ return new class extends Migration
 };
 ```
 
-```
+```php
 class Post extends Model
 {
     use MustBePublished;
@@ -87,7 +87,7 @@ class Post extends Model
 }
 ```
 
-```
+```php
 Route::get('/posts', function(){
 
     // Create a unpublished post
